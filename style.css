@@ -1,0 +1,236 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap'); */
+
+:root {
+  --very_pale_blue: hsl(225, 100%, 98%);
+  --pale_blue: hsl(225, 100%, 94%);
+  --desaturated_blue: hsl(224, 23%, 55%);
+  --active_lavender: hsl(245, 83%, 68%);
+  --bright_blue: hsl(245, 75%, 52%);
+  --dark_blue: hsl(223, 47%, 23%);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  width: 100%;
+  max-width: 144rem;
+  background-color: hsl(224, 100%, 92%);
+  margin: auto;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  width: 32.7rem;
+  height: 56.7rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2rem 4rem -4rem hsl(0, 0%, 0%);
+}
+
+.hero {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Order Summary */
+
+.summary {
+  padding-top: 3.4rem;
+  color: var(--dark_blue);
+  font-size: 1.07rem;
+  text-shadow: .1rem 0 var(--dark_blue);
+  letter-spacing: .09rem;
+  font-weight: 900;
+  padding-inline: 2.4rem;
+}
+
+.summary>p {
+  padding-top: 2.1rem;
+  color: var(--desaturated_blue);
+  font-size: 1.5rem;
+  font-kerning: normal;
+  font-weight: 500;
+  text-shadow: none;
+  letter-spacing: 0;
+  line-height: 2.5rem;
+  padding-inline: 1rem;
+}
+
+/* Price Box */
+
+ul {
+  background-color: var(--very_pale_blue);
+  margin-inline: 2.4rem;
+  margin-top: 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem;
+  border-radius: 1.5rem;
+}
+
+li {
+  list-style-type: none;
+  padding-top: .2rem;
+}
+
+b {
+  color: var(--dark_blue);
+}
+
+.price {
+  margin-left: 2rem;
+  margin-right: auto;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+  color: var(--desaturated_blue);
+}
+
+b {
+  font-weight: 900;
+}
+
+#change {
+  text-underline-offset: .1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bright_blue);
+  transition: 100ms;
+  cursor: pointer;
+}
+
+#change:hover {
+  color: var(--dark_blue);
+}
+
+/* Checkout & Cancel */
+
+.button {
+  width: 27.9rem;
+  height: 5rem;
+  box-shadow: 0rem 1rem 4rem -1rem hsla(245, 75%, 52%, 0.753);
+  background-color: var(--bright_blue);
+  color: white;
+  font-weight: 900;
+  line-height: 5rem;
+  margin-inline: auto;
+  margin-top: 2.3rem;
+  margin-bottom: 2.6rem;
+  border-radius: 1.1rem;
+  letter-spacing: 0.025rem;
+  transition: 100ms;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--active_lavender);
+}
+
+.cancel {
+  background: none;
+  color: var(--desaturated_blue);
+  font-weight: 900;
+  transition: 100ms;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  color: var(--dark_blue);
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: .5rem;
+  color: var(--dark_blue);
+}
+
+footer>a {
+  text-decoration: none;
+  color: var(--dark_blue);
+  transition: 100ms;
+}
+
+footer>a:hover {
+  color: var(--active_lavender);
+}
+
+@media screen and (min-width: 37.5rem) {
+  body {
+    background-color: var(--pale_blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 47rem;
+  }
+
+  .card {
+    width: 45rem;
+    height: 69.7rem;
+  }
+
+  .summary {
+    font-size: 1.36rem;
+    padding-top: 4.9rem;
+  }
+
+  .summary>p {
+    font-size: 1.64rem;
+    margin-inline: 4.1rem;
+    line-height: 2.6rem;
+  }
+
+  ul {
+    margin-inline: 4.8rem;
+    padding-block: 2.1rem;
+    padding-left: 2.4rem;
+    background-color: hsla(228, 100%, 98%, 0.75);
+  }
+
+  .button {
+    margin-top: 3.2rem;
+    width: 35.4rem;
+    margin-bottom: 3.4rem;
+  }
+
+  .price {
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+  }
+
+  .price>b {
+    font-size: 1.6rem;
+    line-height: 2.7rem;
+  }
+
+  #change {
+    font-size: 1.4rem;
+    margin-right: .9rem;
+  }
+
+  .cancel {
+    text-shadow: .04rem 0 var(--desaturated_blue);
+  }
+}
