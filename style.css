@@ -148,12 +148,23 @@ b {
   background-color: var(--active_lavender);
 }
 
-.cancel {
+.proceed {
+  text-decoration: none;
+  color: white;
+}
+
+.cancelButton {
   background: none;
   color: var(--desaturated_blue);
   font-weight: 900;
   transition: 100ms;
   cursor: pointer;
+}
+
+.cancel {
+  text-decoration: none;
+  color: var(--desaturated_blue);
+  transition: 100ms;
 }
 
 .cancel:hover {
